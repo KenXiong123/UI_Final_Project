@@ -9,7 +9,7 @@ data = {
         "dates_served": "1981 to 2006",
 		"picture": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Sandra_Day_O%27Connor_crop.jpg",
         "education": "Stanford Law School",
-        "ideology": , 
+        "ideology": "https://raw.githubusercontent.com/KenXiong123/UI_Final_Project/main/images/oconnor_ideology.png", 
         "nominated": "Ronald Reagan, 1981",
 		"fun_facts": ["first woman confirmed to Supreme Court", "unanimously confirmed by Senate", "frequent 'swing' vote"]
 	},
@@ -19,7 +19,7 @@ data = {
         "dates_served": "1993 to 2020",
 		"picture": "https://www.womenshistory.org/sites/default/files/styles/main_image/public/images/2021-03/RuthBaderGinsburg_Square.jpg",
         "education": "Harvard Law School, Columbia Law School",
-        "ideology": , 
+        "ideology": "https://raw.githubusercontent.com/KenXiong123/UI_Final_Project/main/images/rbg_ideology.png", 
         "nominated": "Bill Clinton, 1993",
 		"fun_facts": ["known for advocacy of women's rights and gender equality", "first female member of Harvard Law Review", "first female professor at Columbia to earn tenure"]
 	},
@@ -29,7 +29,7 @@ data = {
         "dates_served": "2009 to --",
 		"picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sonia_Sotomayor_in_SCOTUS_robe.jpg/1200px-Sonia_Sotomayor_in_SCOTUS_robe.jpg",
         "education": "Yale Law School",
-        "ideology": , 
+        "ideology": "https://raw.githubusercontent.com/KenXiong123/UI_Final_Project/main/images/sotomayor_ideology.png", 
         "nominated": "Barack Obama, 2009",
 		"fun_facts": ["first Hispanic Supreme Court Justice", "working class background, known for empathy and 'common touch'", "especially concerned with rights of defendants and criminal justice system reform"]
 	},
@@ -39,7 +39,7 @@ data = {
         "dates_served": "2010 to --",
 		"picture": "https://api.oyez.org/sites/default/files/images/people/elena_kagan/elena-kagan-photo.jpg",
         "education": "Harvard Law School",
-        "ideology": , 
+        "ideology": "https://raw.githubusercontent.com/KenXiong123/UI_Final_Project/main/images/kagan_ideology.png", 
         "nominated": "Barack Obama, 2010",
 		"fun_facts": ["only current Supreme Court Justice with no prior judicial experience", "the Justice most in touch with pop culture and technology", "first female U.S. Solicitor General"]
 	},
@@ -49,7 +49,7 @@ data = {
         "dates_served": "2020 to --",
 		"picture": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Amy_Coney_Barrett_official_portrait.jpg",
         "education": "Notre Dame Law School",
-        "ideology": , 
+        "ideology": "https://raw.githubusercontent.com/KenXiong123/UI_Final_Project/main/images/barrett_ideology.png", 
         "nominated": "Donald Trump, 2020",
 		"fun_facts": ["previously a law professor at Notre Dame", "taught subjects of federal courts, constitutional law, and statutory interpretation", "extremely contentious confirmation process"]
 	},
