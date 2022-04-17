@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+    let data = {{data|tojson}}
+</script>
+<div class = "row">
+  <div class = "col-md-6">
+    <!-- Some image here -->
+    <img id = "homepage_img" alt = "image of supreme court building" src ="https://images.pexels.com/photos/6610670/pexels-photo-6610670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+  </div>
+  <div class = "col-md-6 homepage-spacer">
+    <div id = "homepage-large-text">
+      Who are the women behind the highest court in the United States?
+    </div>
+    <div class = "homepage-text-spacer">
+      <a href="/learn"><button class = "main_btn_style" type="button" id="start_button">Start Learning</button></a>
+    </div>
+    <div id="homepage-small-text">
+      Ready to test your knowledge?
+    </div>
+    <div class = "homepage-text-spacer">
+      <button class = "secondary_btn_style" type="button" id="start_button">Take the Quiz</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
