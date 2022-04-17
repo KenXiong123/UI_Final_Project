@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <script>
+        let data =
+        {{data|tojson}}
+    </script>
+
+    <div class = "col-md-4 center homepage-text-spacer" id="round_3">Round 3: Ordering</div>
+    <div>Drag each statement and match it to the corresponding Justice</div>
+    
+{% endblock %}
