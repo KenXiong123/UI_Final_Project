@@ -1,0 +1,83 @@
+.navbar-brand{
+  color: #ff69b4;
+}
+.homepage-spacer{
+  margin-top: 200px;
+}
+#homepage-large-text{
+  font-size: 32px;
+}
+#homepage-small-text{
+  font-size: 24px;
+}
+.main_btn_style{
+  border: 4px solid #ff69b4;
+  background-color: #ff69b4;
+  border-radius: 2px;
+  color: white;
+}
+.secondary_btn_style{
+  border: 2px solid #ff69b4;
+  background-color: white;
+  border-radius: 2px;
+  color: #ff69b4;
+}
+
+.homepage-text-spacer{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+img{
+  width: 100%;
+}
+#homepage_img{
+  margin-top: 100px;
+}
+.large-text{
+  font-size: 32px;
+}
+.bottom_right_button_pos{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.bottom_left_button_pos{
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+}
+#judge_name{
+  font-weight: bold;
+  font-size: 36px;
+}
+#served{
+  font-size: 20px;
+}
+.column_margins{
+  padding: 30px;
+}
+.judge_info_text{
+  font-size: 28px;
+}
+#ideology_img{
+  width: 50%;
+}
+.center{
+  text-align: center;
+}
+#learning_complete_text_1{
+  margin-top: 150px;
+  font-size: 46px;
+}
+#learning_complete_text_2{
+  margin-top: 50px;
+  font-size: 28px;
+}
+#back_to_learn{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#cont_to_quiz{
+  margin-left: 20px;
+  margin-right: 20px;
+}
