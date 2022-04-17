@@ -113,6 +113,14 @@ def matching():
     image_list = []
     for i in data:
         image_list.append(data[i]["picture"])
+    return render_template('quiz_naming.html', data=image_list)
+
+@app.route('/quiz/2')
+def matching():
+    global data
+    image_list = []
+    for i in data:
+        image_list.append(data[i]["picture"])
     return render_template('quiz_matching.html', data=image_list)
 
 
