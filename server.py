@@ -107,7 +107,7 @@ def learn_complete():
 def quiz_intro():
     return render_template('quiz_intro.html')
 
-@app.route('/quiz/2')
+@app.route('/quiz/1')
 def matching():
     global data
     image_list = []
