@@ -103,6 +103,10 @@ def learn_complete():
 
 
 ### QUIZ
+@app.route('/quiz_intro')
+def quiz_intro():
+    return render_template('quiz_intro.html')
+
 @app.route('/quiz/2')
 def matching():
     global data
