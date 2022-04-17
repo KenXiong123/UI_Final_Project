@@ -63,21 +63,21 @@ learn_times = [None, None, None, None, None]
 # add names of html files in render template
 @app.route('/')
 def main():
-    return render_template('')
+    return render_template('homepage.html', data=data)
 
 @app.route('/learn')
 def learn_home():
-    return render_template('')
+    return render_template('learn_intro.html')
 
 @app.route('/learn/<key>')
 def learn(key=None):
     global data
     item = data[int(key)]
-    return render_template('', item=item, key=key)
+    return render_template('judge_template.html', item=item, key=key, data=data)
 
 @app.route('/learn_complete')
 def learn_complete():
-    return render_template('')
+    return render_template('learn_complete.html')
 
 ### QUIZ
 
