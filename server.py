@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
+from datetime import datetime
+
 app = Flask(__name__)
 
 data = {
@@ -73,6 +75,7 @@ def learn_home():
 def learn(key=None):
     global data
     item = data[int(key)]
+    learn_times[int(key)-1] = datetime.now()
     return render_template('judge_template.html', item=item, key=key, data=data)
 
 @app.route('/learn_complete')
