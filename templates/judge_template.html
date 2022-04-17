@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'judge_template.js') }}"></script>
+
+<script>
+    let item = {{item|tojson}}
+    let key = {{key|tojson}}
+    let data = {{data|tojson}}
+</script>
+
+<div class = "row">
+
+  <div class = "col-md-12 column_margins">
+    <div class = "row">
+      <div class = "col-md-12">
+        <div id="judge_name">
+          {{item.name}}
+        </div>
+        </div>
+      </div>
+
+    <div class = "row">
+      <div class = "col-md-12">
+        <div id="served">
+          served: {{item.dates_served}}
+        </div>
+        </div>
+      </div>
+  </div>
+  </div>
+
+  <div class = "row">
+        <div class = "col-md-4 column_margins">
+          <div class = "row">
+            <div class = "col-md-10">
+              <img id = "judge_img" alt="image of {{item.name}}" src={{item.picture}}>
+            </div>
+            <div class = "col-md-2"></div>
+        </div>
+        </div>
+
+        <div class = "col-md-8 column_margins">
+          <div class = "judge_info_text" id = "judge_education">
+            <b>Education:</b> {{item.education}}
+          </div>
+
+          <div class = "judge_info_text" id = "ideology">
+            <b>Ideology:</b> <br> <img id = "ideology_img" alt="scale of {{item.name}}'s ideology'" src={{item.ideology}}>
+          </div>
+
+          <div class = "judge_info_text" id = "judge_nominated">
+            <b>Nominated by:</b> {{item.nominated}}
+          </div>
+
+          <div class = "judge_info_text" id = "judge_facts">
+            <b>Fun facts:</b> <br>
+            {% for fact in item.fun_facts %}
+            <li>{{fact}}</li>
+            {% endfor %}
+          </ul>
+          </div>
+        </div>
+
+  </div>
+  <div class = "bottom_right_button_pos">
+    <button class = "main_btn_style" type="button" id="next_learn">Next Judge</button>
+  </div>
+  <div class = "bottom_left_button_pos">
+    <button class = "secondary_btn_style" type="button" id="last_learn">Last Judge</button>
+  </div>
+
+
+{% endblock %}
