@@ -62,7 +62,6 @@ learn_times = [None, None, None, None, None]
 
 ### LEARN 
 
-# add names of html files in render template
 @app.route('/')
 def main():
     return render_template('homepage.html', data=data)
