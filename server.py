@@ -74,7 +74,7 @@ quiz_data = {
     7: {"person": "Sonia Sotomayor", "fact": "known for empathy"}
 },
 # keep time user entered each learning page in list, indexed by page
-learn_times = [None, None, None, None, None]
+learn_times = [[], [], [], [], []]
 
 
 ### LEARN
@@ -93,7 +93,7 @@ def learn_home():
 def learn(key=None):
     global data
     item = data[int(key)]
-    learn_times[int(key) - 1] = datetime.now()
+    learn_times[int(key) - 1].append(datetime.now())
     return render_template('judge_template.html', item=item, key=key, data=data)
 
 
