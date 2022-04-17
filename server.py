@@ -108,7 +108,7 @@ def quiz_intro():
     return render_template('quiz_intro.html')
 
 @app.route('/quiz/1')
-def matching():
+def naming():
     global data
     image_list = []
     for i in data:
