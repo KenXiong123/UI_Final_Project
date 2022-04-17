@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+
+<div class = "row">
+  <div class = "col-md-12" id="learning_complete_text_1">
+    The quiz has three Rounds:
+  </div>
+</div>
+<div class = "row">
+  <div class = "col-md-4 center homepage-text-spacer" id="learning_complete_text_2">
+    Round 1: Naming
+  </div>
+
+  <div class = "col-md-4 center homepage-text-spacer" id="learning_complete_text_2">
+    Round 2: Matching
+  </div>
+
+  <div class = "col-md-4 center homepage-text-spacer" id="learning_complete_text_2">
+    Round 3: Ordering
+  </div>
+</div>
+
+<div class = "row">
+  <div class = "col-md-4 center homepage-text-spacer" id="learning_complete_text_2">
+    Select the name of each Supreme Court Justice under their picture
+  </div>
+
+  <div class = "col-md-4 center homepage-text-spacer" id="learning_complete_text_2">
+    Drag each statement and match it to the corresponding Justice
+  </div>
+
+  <div class = "col-md-4 center homepage-text-spacer" id="learning_complete_text_2">
+    Order each Justice on their ideology 
+  </div>
+</div>
+{% endblock %}
