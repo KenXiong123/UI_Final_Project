@@ -162,3 +162,13 @@ img{
   font-weight: bold;
 
 }
+#FACT{
+  background-color: #ff69b4;
+  width: 250px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+}
