@@ -1,11 +1,26 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<script>
-    let data = {{data|tojson}}
-</script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz_matching.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+    <script>
+        let data = {{data|tojson}};
+        let image = {{image|tojson}};
+    </script>
 
-<div class = "col-md-4 center homepage-text-spacer" id="round_2">Round 2: Matching</div>
+    <div class="matching" id="round_2">Round 2: Matching</div>
     <div>Drag each statement and match it to the corresponding Justice</div>
+
+    <div class="whole">
+        <div class="row" id="matching_people"></div>
+        <div id="FACT">FACTS</div>
+        <div id="facts"></div>
+    </div>
+
+    <div class="bottom_right_button_pos">
+        <a href="/quiz/3">
+            <button class="main_btn_style" type="button" id="next_learn">Enter Round 3: Ordering</button>
+        </a>
+    </div>
 
 {% endblock %}

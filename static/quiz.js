@@ -1,7 +1,6 @@
-
 function next_page(key){
   int_key = parseInt(key) + 1
-  // console.log(int_key)
+  //console.log(int_key)
   if(int_key < 6){
     window.location.href = "/learn/"+int_key
   }

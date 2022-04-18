@@ -71,8 +71,8 @@ quiz_data = {
     4: {"person": "Sonia Sotomayor", "fact": "first Hispanic on Supreme Court"},
     5: {"person": "Ruth Bader Ginsburg", "fact": "champion of women’s rights and gender equality"},
     6: {"person": "Elena Kagan", "fact": "first female U.S. Solicitor General"},
-    7: {"person": "Sonia Sotomayor", "fact": "known for empathy"}
-},
+    7: {"person": "Sonia Sotomayor", "fact": "known for empathy"},
+}
 # keep time user entered each learning page in list, indexed by page
 learn_times = [[], [], [], [], []]
 
@@ -107,6 +107,10 @@ def learn_complete():
 def quiz_intro():
     return render_template('quiz_intro.html')
 
+@app.route('/quiz_complete')
+def quiz_complete():
+    return render_template('quiz_complete.html')
+
 @app.route('/quiz/1')
 def naming():
     global data
@@ -121,7 +125,8 @@ def matching():
     image_list = []
     for i in data:
         image_list.append(data[i]["picture"])
-    return render_template('quiz_matching.html', data=image_list)
+
+    return render_template('quiz_matching.html', image=image_list,data=quiz_data)
 
 
 @app.route('/quiz/3')
