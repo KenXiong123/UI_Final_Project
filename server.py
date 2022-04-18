@@ -120,9 +120,11 @@ def quiz_complete():
 def naming():
     global data
     image_list = []
+    name_list  = []
     for i in data:
         image_list.append(data[i]["picture"])
-    return render_template('quiz_naming.html', data=image_list)
+        name_list.append(data[i]["name"])
+    return render_template('quiz_naming.html', image=image_list, name=name_list)
 
 
 @app.route('/quiz/2')
