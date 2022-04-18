@@ -1,6 +1,22 @@
 {% extends "layout.html" %}
 
 {% block content %}
+    <div class="row">
+        <div class="col-md-12 center" id="quiz_complete_text_1">
+            Great Job!
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-12 center homepage-text-spacer" id="quiz_complete_text_2">
+            <a href="/quiz_intro">
+                <button class="secondary_btn_style" type="button" id="back_to_quiz">Play Again</button>
+            </a>
+            or
+            <a href="/">
+                <button class="main_btn_style" type="button" id="return_to_home">Return to Home</button>
+        </div>
+        </a>
+    </div>
 
 {% endblock %}

@@ -138,4 +138,11 @@ img{
   font-weight: bold;
 }
 
-
+#quiz_complete_text_1{
+  margin-top: 150px;
+  font-size: 46px;
+}
+#quiz_complete_text_2{
+  margin-top: 50px;
+  font-size: 28px;
+}
