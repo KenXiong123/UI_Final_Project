@@ -14,7 +14,7 @@ function displayImages(image) {
 
 function displaySelect(name) {
     for (var i = 0; i < name.length; i++){
-        let new_select = $("<select id = select_"+i+">")
+        let new_select = $("<select id = s_"+i+">")
         for (var j = 0; j < name.length; j++){
             var opt = new Option(name[j], j);
             opt.value = j;
@@ -27,9 +27,41 @@ function displaySelect(name) {
     }
 }
 
+function check(name){
+    var correct = []
+    for (var i = 0; i < name.length; i++){
+        var e = document.getElementById("s_"+i)
+        var text = e.options[e.selectedIndex].text
+        console.log(text)
+        if (name[i] == text){
+            correct.push(1)
+        }
+        $("#s_"+i).prop('disabled', true)
+    }
+    console.log(correct)
+
+    $.ajax({
+        type: "POST",
+        url: "/correct",                
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify(correct),
+        success: function(){
+            console.log(correct)
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
+
 $(document).ready(function () {
     displayImages(image);
     displaySelect(name);
-    
-
+    $("#naming_result").click( function(){
+        check(name)
+    })
 });
