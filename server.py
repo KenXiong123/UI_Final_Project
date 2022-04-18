@@ -75,6 +75,7 @@ quiz_data = {
 }
 
 correct_amount = 0
+full_score = 20
 
 # keep time user entered each learning page in list, indexed by page
 learn_times = [[], [], [], [], []]
@@ -108,12 +109,15 @@ def learn_complete():
 ### QUIZ
 @app.route('/quiz_intro')
 def quiz_intro():
-    return render_template('quiz_intro.html')
-
+	global correct_amount
+	correct_amount = 0
+	return render_template('quiz_intro.html')
 
 @app.route('/quiz_complete')
 def quiz_complete():
-    return render_template('quiz_complete.html')
+	global correct_amount
+	global full_score
+	return render_template('quiz_complete.html', correct_amount=correct_amount, full_score=full_score)
 
 
 @app.route('/quiz/1')
