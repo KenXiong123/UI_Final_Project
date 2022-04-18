@@ -46,6 +46,15 @@ img{
   bottom: 30px;
   left: 30px;
 }
+
+.bottom_middle_time_pos{
+  position: fixed;
+  bottom: 30px;
+  text-align: center;
+  right: 350px;
+  left: 350px;
+}
+
 #judge_name{
   font-weight: bold;
   font-size: 36px;
