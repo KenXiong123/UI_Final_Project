@@ -1,10 +1,85 @@
+{% extends "layout.html" %}
+
+{% block content %}
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz_naming.js') }}"></script>
 <script>
-    let data = {{data|tojson}}
+    let image = {{image|tojson}}
+    let name = {{name|tojson}}
 </script>
 
-<div class="contianer">
-    <div class = "jumbotron homepage-text-spacer" id="learning_complete_text_2">
-    Round 1: Naming
+<div class="naming" id="round_1">Round 1: Naming</div>
+<div id="naming_description">Select the name of each Supreme Court Justice under their picture</div>
+
+<div class="naming_container">
+    <div class="row">
+        <div class="col-md-2">
+            <image src={{image[0]}}>
+        </div>
+        <div class="col-md-2">
+            <image src={{image[1]}}>
+        </div>
+        <div class="col-md-2">
+            <image src={{image[2]}}>
+        </div>
+        <div class="col-md-2">
+            <image src={{image[3]}}>
+        </div>
+        <div class="col-md-2">
+            <image src={{image[4]}}>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <select id="select_0">
+                <option value="0"> {{name[0]}} </option>
+                <option value="1"> {{name[1]}} </option>
+                <option value="2"> {{name[2]}} </option>
+                <option value="3"> {{name[3]}} </option>
+                <option value="4"> {{name[4]}} </option>
+            </select>
+        </div>
+         <div class="col-md-2">
+            <select id="select_1">
+                <option value="0"> {{name[0]}} </option>
+                <option value="1"> {{name[1]}} </option>
+                <option value="2"> {{name[2]}} </option>
+                <option value="3"> {{name[3]}} </option>
+                <option value="4"> {{name[4]}} </option>
+            </select>
+        </div>
+         <div class="col-md-2">
+            <select id="select_2">
+                <option value="0"> {{name[0]}} </option>
+                <option value="1"> {{name[1]}} </option>
+                <option value="2"> {{name[2]}} </option>
+                <option value="3"> {{name[3]}} </option>
+                <option value="4"> {{name[4]}} </option>
+            </select>
+        </div>
+         <div class="col-md-2">
+            <select id="select_3">
+                <option value="0"> {{name[0]}} </option>
+                <option value="1"> {{name[1]}} </option>
+                <option value="2"> {{name[2]}} </option>
+                <option value="3"> {{name[3]}} </option>
+                <option value="4"> {{name[4]}} </option>
+            </select>
+        </div>
+         <div class="col-md-2">
+            <select id="select_4">
+                <option value="0"> {{name[0]}} </option>
+                <option value="1"> {{name[1]}} </option>
+                <option value="2"> {{name[2]}} </option>
+                <option value="3"> {{name[3]}} </option>
+                <option value="4"> {{name[4]}} </option>
+            </select>
+        </div>
     </div>
 </div>
+
+<div class="bottom_right_button_pos">
+        <a href="/quiz/2">
+            <button class="main_btn_style" type="button" id="next_quiz_match">Enter Round 2: Matching</button>
+        </a>
+</div>
+{% endblock %}
