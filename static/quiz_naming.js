@@ -12,14 +12,19 @@ function displayImages(image) {
     });
 }
 
-function displayFacts(name) {
-    $.each(name, function (index, value) {
-        let person = name[index]
-        console.log(person)
-        let fact = value["fact"]
-        let new_fact = $("<div>")
-        
-    });
+function displaySelect(name) {
+    for (var i = 0; i < name.length; i++){
+        let new_select = $("<select id = select_"+i+">")
+        for (var j = 0; j < name.length; j++){
+            var opt = new Option(name[j], j);
+            opt.value = j;
+            opt.text = name[j];
+            new_select.append(opt);
+        }
+        let new_col = $("<div class='col-md-2' id='p_" + i + "'>");
+        new_col.append(new_select);
+        $("#select_container").append(new_col);
+    }
 }
 
 $(document).ready(function () {
