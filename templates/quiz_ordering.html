@@ -3,8 +3,7 @@
 {% block content %}
     <script type="text/javascript" src="{{ url_for('static', filename = 'quiz_ordering.js') }}"></script>
     <script>
-        let data =
-        {{data|tojson}}
+        let data = {{data|tojson}}
     </script>
 
     <div class="homepage-text-spacer" id="round_3">Round 3: Ordering</div>
