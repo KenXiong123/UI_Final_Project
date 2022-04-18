@@ -110,22 +110,23 @@ def learn_complete():
 ### QUIZ
 @app.route('/quiz_intro')
 def quiz_intro():
-	global correct_amount
-	correct_amount = 0
-	return render_template('quiz_intro.html')
+    global correct_amount
+    correct_amount = 0
+    return render_template('quiz_intro.html')
+
 
 @app.route('/quiz_complete')
 def quiz_complete():
-	global correct_amount
-	global full_score
-	return render_template('quiz_complete.html', correct_amount=correct_amount, full_score=full_score)
+    global correct_amount
+    global full_score
+    return render_template('quiz_complete.html', correct_amount=correct_amount, full_score=full_score)
 
 
 @app.route('/quiz/1')
 def naming():
     global data
     image_list = []
-    name_list  = []
+    name_list = []
     for i in data:
         image_list.append(data[i]["picture"])
         name_list.append(data[i]["name"])
@@ -146,12 +147,12 @@ def matching():
 def ordering():
     global data
     image_list = []
-    name_list=["Sonia Sotomayor","Ruth Bader Ginsburg","Elena Kagan","Sandra Day O'Connor","Amy Coney Barrett"]
-    image_name=[]
+    name_list = ["Sonia Sotomayor", "Ruth Bader Ginsburg", "Elena Kagan", "Sandra Day O'Connor", "Amy Coney Barrett"]
+    image_name = []
     for i in data:
         image_list.append(data[i]["picture"])
         image_name.append(data[i]["name"])
-    return render_template('quiz_ordering.html', image=image_list,name=name_list,nameM = image_name)
+    return render_template('quiz_ordering.html', image=image_list, name=name_list, nameM=image_name)
 
 
 @app.route('/correct', methods=['GET', 'POST'])
@@ -160,11 +161,9 @@ def get_correct():
     json_data = request.get_json()
     print(json_data)
     correct_amount += len(json_data)
-    print("new",correct_amount)
+    print("new", correct_amount)
     return 'success'
-
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-
