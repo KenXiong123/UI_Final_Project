@@ -81,3 +81,61 @@ img{
   margin-left: 20px;
   margin-right: 20px;
 }
+#line{
+  border-bottom: solid 5px black;
+  width: 1500px;
+}
+#ordering_people{
+  padding-top: 200px;
+}
+.block{
+  border: solid 1px darkgray;
+  width: 40px;
+  height: 100px;
+  background-color: darkgray;
+  display: inline-block;
+}
+#block2{
+  margin-left: 200px;
+}
+#block3{
+  margin-left: 400px;
+}
+#block4{
+  margin-left: 400px;
+}
+#block5{
+  margin-left: 280px;
+}
+.whole1{
+  margin-left: 100px;
+}
+.type{
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+}
+#moderate{
+  margin-left: 650px;
+}
+#conservative{
+  margin-left: 450px;
+}
+#match_description{
+  font-size: 20px;
+  padding-bottom: 150px;
+}
+#order_description{
+  font-size: 20px;
+  padding-bottom: 250px;
+}
+#round_2{
+  font-size: 30px;
+  font-weight: bold;
+}
+#round_3{
+  font-size: 42px;
+  font-weight: bold;
+}
+
+

@@ -1,15 +1,30 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz_ordering.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
     <script>
         let data =
         {{data|tojson}}
     </script>
 
-    <div class = "col-md-4 center homepage-text-spacer" id="round_3">Round 3: Ordering</div>
-    <div>Drag each statement and match it to the corresponding Justice</div>
-    
+    <div class="homepage-text-spacer" id="round_3">Round 3: Ordering</div>
+    <div id = "order_description">Drag each portrait of a Justice to the correct order of their ideology</div>
+
+    <div class="whole1">
+        <div class="block" id="block1"></div>
+        <div class="block" id="block2"></div>
+        <div class="block" id="block3"></div>
+        <div class="block" id="block4"></div>
+        <div class="block" id="block5"></div>
+        <div id="line"></div>
+        <div class="type" id="liberate">Liberal</div>
+        <div class="type" id="moderate">Moderate</div>
+        <div class="type" id="conservative">Conservative</div>
+
+    </div>
+    <div class="row" id="ordering_people"></div>
+
     <div class="bottom_right_button_pos">
         <a href="/quiz_complete">
             <button class="main_btn_style" type="button" id="next_learn">Finish Quiz</button>
