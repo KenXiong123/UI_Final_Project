@@ -121,10 +121,6 @@ img{
 #conservative{
   margin-left: 450px;
 }
-#naming_description{
-  font-size: 20px;
-  padding-bottom: 150px;
-}
 #match_description{
   font-size: 20px;
   padding-bottom: 150px;
@@ -132,10 +128,6 @@ img{
 #order_description{
   font-size: 20px;
   padding-bottom: 250px;
-}
-#round_1{
-  font-size: 30px;
-  font-weight: bold;
 }
 #round_2{
   font-size: 30px;
@@ -153,4 +145,12 @@ img{
 #quiz_complete_text_2{
   margin-top: 50px;
   font-size: 28px;
+}
+.result_button{
+  border: 4px solid black;
+  background-color: white;
+  border-radius: 2px;
+  color: black;
+  font-weight: bold;
+
 }

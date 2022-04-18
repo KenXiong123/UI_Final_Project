@@ -3,8 +3,8 @@
 {% block content %}
     <script type="text/javascript" src="{{ url_for('static', filename = 'quiz_matching.js') }}"></script>
     <script>
-        let data = {{data|tojson}};
-        let image = {{image|tojson}};
+        let data = {{data|tojson}}
+        let image = {{image|tojson}}
     </script>
 
     <div class="matching" id="round_2">Round 2: Matching</div>
