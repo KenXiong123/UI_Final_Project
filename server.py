@@ -98,7 +98,8 @@ def learn(key=None):
     global data
     item = data[int(key)]
     learn_times[int(key) - 1].append(datetime.now())
-    return render_template('judge_template.html', item=item, key=key, data=data)
+    times = learn_times[int(key) - 1]
+    return render_template('judge_template.html', item=item, key=key, data=data, times=times)
 
 
 @app.route('/learn_complete')

@@ -61,12 +61,18 @@
             {% endfor %}
           </ul>
           </div>
-        </div>
-
   </div>
   <div class = "bottom_right_button_pos">
     <button class = "main_btn_style" type="button" id="next_learn">Next Judge</button>
   </div>
+
+  <div class = "bottom_middle_time_pos">
+    <b>Page last accessed: </b>
+        {% if times|length > 1 %}
+            {{times[times|length - 2]}}
+        {% endif %}
+  </div>
+
   <div class = "bottom_left_button_pos">
     <button class = "secondary_btn_style" type="button" id="last_learn">Last Judge</button>
   </div>
