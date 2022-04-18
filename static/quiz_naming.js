@@ -46,15 +46,6 @@ function check(name){
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(correct),
-        success: function(){
-            console.log(correct)
-        },
-        error: function(request, status, error){
-            console.log("Error");
-            console.log(request)
-            console.log(status)
-            console.log(error)
-        }
     });
 }
 
