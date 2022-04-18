@@ -75,7 +75,7 @@ quiz_data = {
 }
 
 correct_amount = 0
-full_score = 20
+full_score = 18
 
 # keep time user entered each learning page in list, indexed by page
 learn_times = [[], [], [], [], []]

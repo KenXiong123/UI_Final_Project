@@ -84,6 +84,16 @@ function check1(correct1, wrong1) {
         $("#e5").text("wrong!");
     }
 
+    $("#dialog").dialog({
+          buttons: [
+          {
+                text:"You got "+correct1.length+" right",
+                click: function() {
+                $( this ).dialog( "close" );
+            }
+          }
+          ]
+    });
 
 
     $.ajax({

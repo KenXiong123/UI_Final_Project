@@ -98,6 +98,17 @@ function check(correct, wrong) {
          $("#f7").css({"background-color": "red"});
     }
 
+    $("#dialog").dialog({
+          buttons: [
+          {
+                text:"You got "+correct.length+" right",
+                click: function() {
+                $( this ).dialog( "close" );
+            }
+          }
+          ]
+    });
+
     $.ajax({
         type: "POST",
         url: "/correct",
