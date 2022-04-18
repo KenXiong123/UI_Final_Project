@@ -8,7 +8,6 @@ function displayImages(image) {
         let new_col = $("<div class='col-md-2' id='p_" + index + "'>");
         new_col.append(new_border);
         $("#matching_people").append(new_col);
-
     });
 }
 
@@ -17,7 +16,7 @@ function displayFacts(data) {
         let person = value["person"]
         console.log(person)
         let fact = value["fact"]
-        let new_fact = $("<div>")
+        let new_fact = $("<div id='f" + index + "'>");
         new_fact.text(fact)
         new_fact.css({"border": "2px solid", "width": "250px", "text-align": "center"})
         new_fact.data("person", person)
@@ -53,52 +52,160 @@ function displayFacts(data) {
     });
 }
 
+function check(correct, wrong) {
+    console.log(correct)
+    console.log(wrong)
+    if(correct.indexOf("f1") >= 0){
+        $("#f1").css({"background-color": "green"});
+    }
+    else{
+         $("#f1").css({"background-color": "red"});
+    }
+    if(correct.indexOf("f2") >= 0){
+        $("#f2").css({"background-color": "green"});
+    }
+    else{
+         $("#f2").css({"background-color": "red"});
+    }
+    if(correct.indexOf("f3") >= 0){
+        $("#f3").css({"background-color": "green"});
+    }
+    else{
+         $("#f3").css({"background-color": "red"});
+    }
+    if(correct.indexOf("f4") >= 0){
+        $("#f4").css({"background-color": "green"});
+    }
+    else{
+         $("#f4").css({"background-color": "red"});
+    }
+    if(correct.indexOf("f5") >= 0){
+        $("#f5").css({"background-color": "green"});
+    }
+    else{
+         $("#f5").css({"background-color": "red"});
+    }
+    if(correct.indexOf("f6") >= 0){
+        $("#f6").css({"background-color": "green"});
+    }
+    else{
+         $("#f6").css({"background-color": "red"});
+    }
+    if(correct.indexOf("f7") >= 0){
+        $("#f7").css({"background-color": "green"});
+    }
+    else{
+         $("#f7").css({"background-color": "red"});
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "/correct",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(correct),
+
+    });
+}
+
 $(document).ready(function () {
     displayImages(image);
     displayFacts(data);
+    const correct = []
+    const wrong = []
     $("#person_0").droppable({
-        over: function(){
-            $("#person_0").css({"background-color":"blue"});
+        over: function () {
+            $("#person_0").css({"background-color": "blue"});
         },
-        out: function() {
+        out: function () {
             $("#person_0").css({"background-color": "white"});
+        },
+        drop: function (event, ui) {
+            let cur_fact = $(ui.draggable);
+            let correct_person = cur_fact.data("person");
+            if (correct_person === "Sandra Day O’Connor") {
+
+                correct.push(cur_fact.attr("id"));
+            } else {
+                wrong.push(cur_fact.attr("id"));
+            }
         },
 
     })
     $("#person_1").droppable({
-        over: function(){
-            $("#person_1").css({"background-color":"blue"});
+        over: function () {
+            $("#person_1").css({"background-color": "blue"});
         },
-        out: function() {
+        out: function () {
             $("#person_1").css({"background-color": "white"});
+        },
+        drop: function (event, ui) {
+            let cur_fact = $(ui.draggable);
+            let correct_person = cur_fact.data("person");
+            if (correct_person === "Ruth Bader Ginsburg") {
+                correct.push(cur_fact.attr("id"));
+            } else {
+                wrong.push(cur_fact.attr("id"));
+            }
         },
 
     })
     $("#person_2").droppable({
-        over: function(){
-            $("#person_2").css({"background-color":"blue"});
+        over: function () {
+            $("#person_2").css({"background-color": "blue"});
         },
-        out: function() {
+        out: function () {
             $("#person_2").css({"background-color": "white"});
+        },
+        drop: function (event, ui) {
+            let cur_fact = $(ui.draggable);
+            let correct_person = cur_fact.data("person");
+            if (correct_person === "Sonia Sotomayor") {
+                correct.push(cur_fact.attr("id"));
+            } else {
+                wrong.push(cur_fact.attr("id"));
+            }
         },
 
     })
     $("#person_3").droppable({
-        over: function(){
-            $("#person_3").css({"background-color":"blue"});
+        over: function () {
+            $("#person_3").css({"background-color": "blue"});
         },
-        out: function() {
+        out: function () {
             $("#person_3").css({"background-color": "white"});
+        },
+        drop: function (event, ui) {
+            let cur_fact = $(ui.draggable);
+            let correct_person = cur_fact.data("person");
+            if (correct_person === "Elena Kagan") {
+                correct.push(cur_fact.attr("id"));
+            } else {
+                wrong.push(cur_fact.attr("id"));
+            }
         },
 
     })
     $("#person_4").droppable({
-        over: function(){
-            $("#person_4").css({"background-color":"blue"});
+        over: function () {
+            $("#person_4").css({"background-color": "blue"});
         },
-        out: function() {
+        out: function () {
             $("#person_4").css({"background-color": "white"});
         },
+        drop: function (event, ui) {
+            let cur_fact = $(ui.draggable);
+            let correct_person = cur_fact.data("person");
+            if (correct_person === "Amy Coney Barrett") {
+                correct.push(cur_fact.attr("id"));
+            } else {
+                wrong.push(cur_fact.attr("id"));
+            }
+        },
+    })
+
+    $("#match_result").click(function () {
+        check(correct, wrong)
     })
 
 });

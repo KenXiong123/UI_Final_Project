@@ -2,7 +2,6 @@
 
 {% block content %}
     <script type="text/javascript" src="{{ url_for('static', filename = 'quiz_ordering.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
     <script>
         let data =
         {{data|tojson}}
@@ -26,6 +25,7 @@
     <div class="row" id="ordering_people"></div>
 
     <div class="bottom_right_button_pos">
+        <button class="result_button" type="button" id="order_result">Check Results</button>
         <a href="/quiz_complete">
             <button class="main_btn_style" type="button" id="finish_quiz">Finish Quiz</button>
         </a>

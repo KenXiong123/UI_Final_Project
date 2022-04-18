@@ -3,6 +3,7 @@ function displayImages(image) {
         let new_image = $("<img src ='" + value + "' alt='image of person" + index + "'>");
         new_image.css({"width": "70%", "height": "200px"})
         let new_col = $("<div class='col-md-2' id='p_" + index + "'>");
+
         new_image.draggable({
             cursor: "move",
             revert: "invalid",
@@ -31,6 +32,8 @@ function displayImages(image) {
 
 $(document).ready(function () {
     displayImages(data);
+    const correct =[]
+    const wrong =[]
     $("#block1").droppable({
         over: function(){
             $("#block1").css({"background-color":"blue"});
@@ -74,6 +77,10 @@ $(document).ready(function () {
         out: function() {
             $("#block5").css({"background-color": "darkgrey"});
         },
+    })
+
+    $("#order_result").click(function () {
+        check(correct, wrong)
     })
 
 

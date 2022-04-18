@@ -73,6 +73,9 @@ quiz_data = {
     6: {"person": "Elena Kagan", "fact": "first female U.S. Solicitor General"},
     7: {"person": "Sonia Sotomayor", "fact": "known for empathy"},
 }
+
+correct_amount = 0
+
 # keep time user entered each learning page in list, indexed by page
 learn_times = [[], [], [], [], []]
 
@@ -80,7 +83,7 @@ learn_times = [[], [], [], [], []]
 ### LEARN
 
 @app.route('/')
-def main():
+def home():
     return render_template('homepage.html', data=data)
 
 
@@ -107,19 +110,20 @@ def learn_complete():
 def quiz_intro():
     return render_template('quiz_intro.html')
 
+
 @app.route('/quiz_complete')
 def quiz_complete():
     return render_template('quiz_complete.html')
+
 
 @app.route('/quiz/1')
 def naming():
     global data
     image_list = []
-    name_list = []
     for i in data:
         image_list.append(data[i]["picture"])
-        name_list.append(data[i]["name"])
-    return render_template('quiz_naming.html', image=image_list, name=name_list)
+    return render_template('quiz_naming.html', data=image_list)
+
 
 @app.route('/quiz/2')
 def matching():
@@ -128,7 +132,7 @@ def matching():
     for i in data:
         image_list.append(data[i]["picture"])
 
-    return render_template('quiz_matching.html', image=image_list,data=quiz_data)
+    return render_template('quiz_matching.html', image=image_list, data=quiz_data)
 
 
 @app.route('/quiz/3')
@@ -140,5 +144,17 @@ def ordering():
     return render_template('quiz_ordering.html', data=image_list)
 
 
+@app.route('/correct', methods=['GET', 'POST'])
+def get_correct():
+    global correct_amount
+    json_data = request.get_json()
+    print(json_data)
+    correct_amount += len(json_data)
+    print("new",correct_amount)
+    return 'success'
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
+
