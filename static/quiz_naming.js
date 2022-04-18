@@ -16,9 +16,9 @@ function displaySelect(name) {
     for (var i = 0; i < name.length; i++){
         let new_select = $("<select id = s_"+i+">")
         for (var j = 0; j < name.length; j++){
-            var opt = new Option(name[j], j)
-            opt.value = j
-            opt.text = name[j]
+            let opt = $("<option id= 'o_"+j+"'>")
+            opt.text(name[j])
+            opt.css({"color":"blue"})
             new_select.append(opt)
         }
         let new_col = $("<div class='col-md-2' id='p_" + i + "'>");
@@ -34,9 +34,9 @@ function check(name){
         var text = e.options[e.selectedIndex].text
         if (name[i] == text){
             correct.push(i)
-            $("#s_"+i).css({"background-color": "green"})
+            $("#s_"+i).css({"background-color": "green","color":"white"})
         }else{
-            $("#s_"+i).css({"background-color": "red"})
+            $("#s_"+i).css({"background-color": "red","color":"white"})
         }
         $("#s_"+i).prop('disabled', true)
     }
