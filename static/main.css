@@ -88,25 +88,7 @@ img{
 #ordering_people{
   padding-top: 200px;
 }
-.block{
-  border: solid 1px darkgray;
-  width: 40px;
-  height: 100px;
-  background-color: darkgray;
-  display: inline-block;
-}
-#block2{
-  margin-left: 200px;
-}
-#block3{
-  margin-left: 400px;
-}
-#block4{
-  margin-left: 400px;
-}
-#block5{
-  margin-left: 280px;
-}
+
 .whole1{
   margin-left: 100px;
 }
@@ -172,8 +154,11 @@ img{
   color: white;
   margin-top: 50px;
 }
-
-.options{
+.options {
   color: black;
   font-weight: bold;
+}
+
+#error_message{
+  padding-bottom: 200px;
 }

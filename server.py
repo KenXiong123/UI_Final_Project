@@ -141,9 +141,12 @@ def matching():
 def ordering():
     global data
     image_list = []
+    name_list=["Sonia Sotomayor","Ruth Bader Ginsburg","Elena Kagan","Sandra Day O'Connor","Amy Coney Barrett"]
+    image_name=[]
     for i in data:
         image_list.append(data[i]["picture"])
-    return render_template('quiz_ordering.html', data=image_list)
+        image_name.append(data[i]["name"])
+    return render_template('quiz_ordering.html', image=image_list,name=name_list,nameM = image_name)
 
 
 @app.route('/correct', methods=['GET', 'POST'])
