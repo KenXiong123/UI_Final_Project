@@ -97,7 +97,7 @@ def learn_home():
 def learn(key=None):
     global data
     item = data[int(key)]
-    learn_times[int(key) - 1].append(datetime.now())
+    learn_times[int(key) - 1].append(datetime.now().strftime(" %I:%M:%S%z %p, %m-%d-%Y"))
     times = learn_times[int(key) - 1]
     return render_template('judge_template.html', item=item, key=key, data=data, times=times)
 
