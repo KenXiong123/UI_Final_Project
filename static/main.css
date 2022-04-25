@@ -1,15 +1,14 @@
 .navbar-brand{
   color: #ff69b4;
-  margin-left: -250px;
 }
 .nav-link{
   color: #ff69b4;
 }
 #learn_nav{
-  margin-left: 1000px;
+  float: right;
 }
 #quiz_nav{
-  margin-left: 50px;
+  float: right;
 }
 .homepage-spacer{
   margin-top: 200px;
