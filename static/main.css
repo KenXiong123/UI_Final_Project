@@ -4,17 +4,20 @@
 .nav-link{
   color: #ff69b4;
 }
+
 #learn_nav{
-  float: right;
+  padding-left: 700px;
   font-size: 18px;
 }
 #quiz_nav{
-  float: right;
+  padding-left: 75px;
   font-size: 18px;
 }
+
 .homepage-spacer{
   margin-top: 200px;
 }
+
 #homepage-large-text{
   font-size: 32px;
 }
