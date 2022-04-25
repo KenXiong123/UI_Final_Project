@@ -48,7 +48,9 @@ img{
   margin-top: 100px;
 }
 .large-text{
-  font-size: 32px;
+  font-size: 28px;
+  text-align: center;
+  padding: 20px;
 }
 .bottom_right_button_pos{
   position: fixed;
