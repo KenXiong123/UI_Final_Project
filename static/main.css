@@ -6,9 +6,11 @@
 }
 #learn_nav{
   float: right;
+  font-size: 18px;
 }
 #quiz_nav{
   float: right;
+  font-size: 18px;
 }
 .homepage-spacer{
   margin-top: 200px;
