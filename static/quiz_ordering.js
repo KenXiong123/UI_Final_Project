@@ -25,7 +25,7 @@ function displayImages(image,nameM) {
             },
         });
         new_image.hover(function () {
-            $(this).css({"background-color": "lightpink", "cursor": "move"});
+            $(this).css({"background-color": "#F8C8DC", "cursor": "move"});
         });
         new_image.mouseleave(function () {
             $(this).css({"background-color": "white"});
@@ -130,6 +130,7 @@ function BlockInfo(name) {
 }
 
 $(document).ready(function () {
+    let control = false
     BlockInfo(name);
     displayImages(image,nameM);
 
@@ -145,12 +146,11 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_p = $(ui.draggable);
             let correct_person = cur_p.data("person");
-            if (correct_person === "Sonia Sotomayor") {
+            if (correct_person === "Sonia Sotomayor" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-            } else {
+            } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
             }
-            cur_p.draggable("disable");
         },
     });
 
@@ -164,12 +164,11 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_p = $(ui.draggable);
             let correct_person = cur_p.data("person");
-            if (correct_person === "Ruth Bader Ginsburg") {
+            if (correct_person === "Ruth Bader Ginsburg" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-            } else {
+            } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
             }
-            cur_p.draggable("disable");
         },
     });
 
@@ -183,12 +182,11 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_p = $(ui.draggable);
             let correct_person = cur_p.data("person");
-            if (correct_person === "Elena Kagan") {
+            if (correct_person === "Elena Kagan" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-            } else {
+            } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
             }
-            cur_p.draggable("disable");
         },
     });
 
@@ -202,12 +200,11 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_p = $(ui.draggable);
             let correct_person = cur_p.data("person");
-            if (correct_person === "Sandra Day O'Connor") {
+            if (correct_person === "Sandra Day O'Connor" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-            } else {
+            } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
             }
-            cur_p.draggable("disable");
         },
     });
     $("#block5").droppable({
@@ -220,18 +217,21 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_p = $(ui.draggable);
             let correct_person = cur_p.data("person");
-            if (correct_person === "Amy Coney Barrett") {
+            if (correct_person === "Amy Coney Barrett" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-            } else {
+            } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
             }
-            cur_p.draggable("disable");
         },
     })
 
 
     $("#order_result").click(function () {
-        check1(correct1, wrong1)
+        if (control == false){
+            check1(correct1, wrong1)
+            control = true
+        }
+        
     })
 
 });

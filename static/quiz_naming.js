@@ -39,6 +39,7 @@ function check(name){
             $("#s_"+i).css({"background-color": "red","color":"white"})
         }
         $("#s_"+i).prop('disabled', true)
+        console.log(correct.length)
     }
     $("#dialog").dialog({
           buttons: [
@@ -62,9 +63,13 @@ function check(name){
 }
 
 $(document).ready(function () {
+    let control = false
     displayImages(image);
     displaySelect(name);
     $("#naming_result").click( function(){
-        check(name)
+        if(control == false){
+            check(name)
+            control = true
+        }
     })
 });

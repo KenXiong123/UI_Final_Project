@@ -25,11 +25,11 @@ function displayFacts(data) {
             revert: "invalid",
             zIndex: 10000,
             start: function (e, i) {
-                $("#person_0").css({"background-color": "yellow"});
-                $("#person_1").css({"background-color": "yellow"});
-                $("#person_2").css({"background-color": "yellow"});
-                $("#person_3").css({"background-color": "yellow"});
-                $("#person_4").css({"background-color": "yellow"});
+                $("#person_0").css({"background-color": "#F8C8DC"});
+                $("#person_1").css({"background-color": "#F8C8DC"});
+                $("#person_2").css({"background-color": "#F8C8DC"});
+                $("#person_3").css({"background-color": "#F8C8DC"});
+                $("#person_4").css({"background-color": "#F8C8DC"});
 
             },
             stop: function (e, i) {
@@ -42,7 +42,7 @@ function displayFacts(data) {
         });
 
         new_fact.hover(function () {
-            $(this).css({"background-color": "lightpink", "cursor": "move"});
+            $(this).css({"background-color": "#F8C8DC", "cursor": "move"});
         });
         new_fact.mouseleave(function () {
             $(this).css({"background-color": "white"});
@@ -122,6 +122,7 @@ function check(correct, wrong) {
 $(document).ready(function () {
     displayImages(image);
     displayFacts(data);
+    let control = false
     const correct = []
     const wrong = []
     $("#person_0").droppable({
@@ -134,14 +135,11 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_fact = $(ui.draggable);
             let correct_person = cur_fact.data("person");
-            if (correct_person === "Sandra Day O’Connor") {
-
+            if (correct_person === "Sandra Day O’Connor" && !correct.includes(cur_fact.attr("id"))) {
                 correct.push(cur_fact.attr("id"));
-            } else {
+            } else if (!wrong.includes(cur_fact.attr("id"))){
                 wrong.push(cur_fact.attr("id"));
             }
-            cur_fact.draggable("disable");
-
         },
 
     })
@@ -155,12 +153,11 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_fact = $(ui.draggable);
             let correct_person = cur_fact.data("person");
-            if (correct_person === "Ruth Bader Ginsburg") {
+            if (correct_person === "Ruth Bader Ginsburg" && !correct.includes(cur_fact.attr("id"))) {
                 correct.push(cur_fact.attr("id"));
-            } else {
+            } else if (!wrong.includes(cur_fact.attr("id"))){
                 wrong.push(cur_fact.attr("id"));
             }
-            cur_fact.draggable("disable");
         },
 
     })
@@ -174,12 +171,11 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_fact = $(ui.draggable);
             let correct_person = cur_fact.data("person");
-            if (correct_person === "Sonia Sotomayor") {
+            if (correct_person === "Sonia Sotomayor" && !correct.includes(cur_fact.attr("id"))) {
                 correct.push(cur_fact.attr("id"));
-            } else {
+            } else if (!wrong.includes(cur_fact.attr("id"))){
                 wrong.push(cur_fact.attr("id"));
             }
-            cur_fact.draggable("disable");
         },
 
     })
@@ -193,12 +189,11 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_fact = $(ui.draggable);
             let correct_person = cur_fact.data("person");
-            if (correct_person === "Elena Kagan") {
+            if (correct_person === "Elena Kagan" && !correct.includes(cur_fact.attr("id"))) {
                 correct.push(cur_fact.attr("id"));
-            } else {
+            } else if (!wrong.includes(cur_fact.attr("id"))){
                 wrong.push(cur_fact.attr("id"));
             }
-            cur_fact.draggable("disable");
         },
 
     })
@@ -212,17 +207,19 @@ $(document).ready(function () {
         drop: function (event, ui) {
             let cur_fact = $(ui.draggable);
             let correct_person = cur_fact.data("person");
-            if (correct_person === "Amy Coney Barrett") {
+            if (correct_person === "Amy Coney Barrett" && !correct.includes(cur_fact.attr("id"))) {
                 correct.push(cur_fact.attr("id"));
-            } else {
+            } else if (!wrong.includes(cur_fact.attr("id"))){
                 wrong.push(cur_fact.attr("id"));
             }
-            cur_fact.draggable("disable");
         },
     })
 
     $("#match_result").click(function () {
-        check(correct, wrong)
+        if (control == false){
+            check(correct, wrong)
+            control = true
+        }
     })
 
 });

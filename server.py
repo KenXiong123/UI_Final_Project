@@ -75,7 +75,7 @@ quiz_data = {
 }
 
 correct_amount = 0
-full_score = 18
+full_score = 17
 
 # keep time user entered each learning page in list, indexed by page
 learn_times = [[], [], [], [], []]
@@ -119,7 +119,7 @@ def quiz_intro():
 def quiz_complete():
     global correct_amount
     global full_score
-    return render_template('quiz_complete.html', correct_amount=correct_amount, full_score=full_score)
+    return render_template('quiz_complete.html', correct_amount = correct_amount, full_score=full_score)
 
 
 @app.route('/quiz/1')
@@ -139,7 +139,6 @@ def matching():
     image_list = []
     for i in data:
         image_list.append(data[i]["picture"])
-
     return render_template('quiz_matching.html', image=image_list, data=quiz_data)
 
 
