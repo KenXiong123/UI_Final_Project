@@ -195,7 +195,6 @@ $(document).ready(function () {
                 wrong.push(cur_fact.attr("id"));
             }
         },
-
     })
     $("#person_4").droppable({
         over: function () {
