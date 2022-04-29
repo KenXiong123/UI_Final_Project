@@ -148,9 +148,11 @@ $(document).ready(function () {
             let correct_person = cur_p.data("person");
             if (correct_person === "Sonia Sotomayor" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-                cur_p.draggable("disable");
             } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
+                if (correct1.includes(cur_p.attr("id"))){
+                    correct1.splice(correct1.indexOf(cur_p.attr("id")), 1)
+                }
             }
         },
     });
@@ -167,9 +169,11 @@ $(document).ready(function () {
             let correct_person = cur_p.data("person");
             if (correct_person === "Ruth Bader Ginsburg" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-                cur_p.draggable("disable");
             } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
+                if (correct1.includes(cur_p.attr("id"))){
+                    correct1.splice(correct1.indexOf(cur_p.attr("id")), 1)
+                }
             }
         },
     });
@@ -186,9 +190,11 @@ $(document).ready(function () {
             let correct_person = cur_p.data("person");
             if (correct_person === "Elena Kagan" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-                cur_p.draggable("disable");
             } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
+                if (correct1.includes(cur_p.attr("id"))){
+                    correct1.splice(correct1.indexOf(cur_p.attr("id")), 1)
+                }
             }
         },
     });
@@ -205,9 +211,11 @@ $(document).ready(function () {
             let correct_person = cur_p.data("person");
             if (correct_person === "Sandra Day O'Connor" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-                cur_p.draggable("disable");
             } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
+                if (correct1.includes(cur_p.attr("id"))){
+                    correct1.splice(correct1.indexOf(cur_p.attr("id")), 1)
+                }
             }
         },
     });
@@ -223,9 +231,11 @@ $(document).ready(function () {
             let correct_person = cur_p.data("person");
             if (correct_person === "Amy Coney Barrett" && !correct1.includes(cur_p.attr("id"))) {
                 correct1.push(cur_p.attr("id"));
-                cur_p.draggable("disable");
             } else if (!wrong1.includes(cur_p.attr("id"))){
                 wrong1.push(cur_p.attr("id"));
+                if (correct1.includes(cur_p.attr("id"))){
+                    correct1.splice(correct1.indexOf(cur_p.attr("id")), 1)
+                }
             }
         },
     })
