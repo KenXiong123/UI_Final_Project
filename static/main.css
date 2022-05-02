@@ -154,7 +154,7 @@ img{
 }
 
 #quiz_complete_text_1{
-  margin-top: 150px;
+  margin-top: 70px;
   font-size: 46px;
 }
 #quiz_complete_text_2{
@@ -227,5 +227,8 @@ img{
   border-radius: 5px;
 }
 #learn_complete_border{
+  margin-top: 150px;
+}
+#quiz_complete_border{
   margin-top: 150px;
 }
