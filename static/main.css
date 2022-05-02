@@ -91,7 +91,7 @@ img{
   text-align: center;
 }
 #learning_complete_text_1{
-  margin-top: 150px;
+  margin-top: 50px;
   font-size: 46px;
 }
 #learning_complete_text_2{
@@ -218,4 +218,14 @@ img{
 }
 .navbar-text{
   color: 	#F5F5F5;
+}
+.border_box{
+  border: 2px solid #ff69b4;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: 	#F5F5F5;
+  border-radius: 5px;
+}
+#learn_complete_border{
+  margin-top: 150px;
 }
