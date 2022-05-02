@@ -30,7 +30,7 @@ data = {
 
     3: {
         "name": "Sonia Sotomayor",
-        "dates_served": "2009 to --",
+        "dates_served": "2009 to present",
         "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sonia_Sotomayor_in_SCOTUS_robe.jpg/1200px-Sonia_Sotomayor_in_SCOTUS_robe.jpg",
         "education": "Yale Law School",
         "ideology": "https://raw.githubusercontent.com/KenXiong123/UI_Final_Project/main/images/sotomayor_ideology.png",
@@ -42,7 +42,7 @@ data = {
 
     4: {
         "name": "Elena Kagan",
-        "dates_served": "2010 to --",
+        "dates_served": "2010 to present",
         "picture": "https://api.oyez.org/sites/default/files/images/people/elena_kagan/elena-kagan-photo.jpg",
         "education": "Harvard Law School",
         "ideology": "https://raw.githubusercontent.com/KenXiong123/UI_Final_Project/main/images/kagan_ideology.png",
@@ -54,7 +54,7 @@ data = {
 
     5: {
         "name": "Amy Coney Barrett",
-        "dates_served": "2020 to --",
+        "dates_served": "2020 to present",
         "picture": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Amy_Coney_Barrett_official_portrait.jpg",
         "education": "Notre Dame Law School",
         "ideology": "https://raw.githubusercontent.com/KenXiong123/UI_Final_Project/main/images/barrett_ideology.png",
