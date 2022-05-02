@@ -18,7 +18,7 @@ function displaySelect(name) {
         for (var j = 0; j < name.length; j++){
             let opt = $("<option id= 'o_"+j+"'>")
             opt.text(name[j])
-            opt.css({"color":"blue"})
+            opt.css({"color":"black"})
             new_select.append(opt)
         }
         let new_col = $("<div class='col-md-2' id='p_" + i + "'>");
@@ -55,7 +55,7 @@ function check(name){
 
     $.ajax({
         type: "POST",
-        url: "/correct",                
+        url: "/correct",
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(correct),
