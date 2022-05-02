@@ -232,3 +232,14 @@ img{
 #quiz_complete_border{
   margin-top: 150px;
 }
+.quiz_intro_text_1{
+  font-size: 28px;
+  padding-top: 20px;
+}
+.quiz_intro_text_2{
+  color:	#696969;
+  font-size: 28px;
+}
+#learn_intro_padding{
+  padding-top: 100px;
+}
