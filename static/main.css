@@ -111,7 +111,7 @@ img{
   width: 1500px;
 }
 #ordering_people{
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .whole1{
@@ -191,9 +191,9 @@ img{
   margin-top: 20px;
 }
 
-#error_message{
-  padding-bottom: 200px;
-}
+/*#error_message{*/
+/*  padding-bottom: 200px;*/
+/*}*/
 .rounded_img{
   border-radius: 5px;
 }
